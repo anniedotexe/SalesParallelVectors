@@ -1,12 +1,12 @@
 /*
-Author:			Annie Wu
+Author: 		Annie Wu
 Assignment:		Homework #2
 
 Class:		  	CS 2560.01 - C++ Programming
 Date:			29 September 2018
 
 Purpose:	  	This program allows the user to enter the sales item's name and cost into parallel vectors.
-				It gives the user the options to add a sale, edit a sale, view all sales, and remove a sale. 
+			It gives the user the options to add a sale, edit a sale, view all sales, and remove a sale. 
 */
 
 #include <iostream>
@@ -22,8 +22,8 @@ void addSale(vector<string> &itemNames, vector<double> &itemCosts) {
 	bool loop = true;
 	while (loop) {
 		cout << "\nEnter an item or say STOP: ";
-		//use one word item names
-		cin >> name;
+		getline(cin, name);
+		cin.ignore();
 
 		if (name == "STOP" or name == "stop" or name == "Stop")
 			loop = false;
